@@ -1,0 +1,11 @@
+{
+  "name": "trafficdemo",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev": "corepack pnpm --filter web dev",
+    "build": "corepack pnpm --filter web build",
+    "lint": "corepack pnpm --filter web lint",
+    "typecheck": "corepack pnpm --filter web typecheck"
+  }
+}

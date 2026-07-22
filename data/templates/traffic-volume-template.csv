@@ -1,0 +1,4 @@
+station_code,station_name,direction,vehicle_type,volume,recorded_at
+CT01,Cao Bo - Mai Son,Nam - Bac,Car,1240,2026-07-01T08:00:00+07:00
+CT01,Cao Bo - Mai Son,Bac - Nam,Truck,325,2026-07-01T08:00:00+07:00
+CT02,Quoc lo 45 - Nghi Son,Nam - Bac,Bus,84,2026-07-01T08:00:00+07:00
