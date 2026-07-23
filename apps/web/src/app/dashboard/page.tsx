@@ -7,8 +7,9 @@ export default function DashboardPage() {
         <span className="eyebrow">Biểu đồ</span>
         <h1>Trung tâm biểu đồ và chỉ số lưu lượng</h1>
         <p>
-          Khu vực này dự kiến tổng hợp biểu đồ đường, cột, tròn, bảng chi tiết và bộ lọc theo
-          trạm, hướng, khung giờ, ngày và tháng.
+          Khi đi tiếp sang lớp analytics, khu vực này sẽ dùng cùng typography, accent và card
+          system hiện tại để biểu đồ, KPI, bộ lọc và bảng số liệu vẫn nhìn như một phần tự nhiên
+          của cùng một sản phẩm.
         </p>
       </section>
 

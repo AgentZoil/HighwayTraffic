@@ -428,7 +428,14 @@ export function TollStationMap() {
       popup
         .setLngLat([lng, lat])
         .setHTML(
-          `<strong>${name}</strong><br/>${province}<br/>${kmMarker}<br/><span>${note}</span>`
+          `<div class="map-popup">
+            <strong class="map-popup-title">${name}</strong>
+            <div class="map-popup-meta">
+              <span><strong>Tỉnh:</strong> ${province}</span>
+              <span><strong>Vị trí:</strong> ${kmMarker}</span>
+              <span>${note}</span>
+            </div>
+          </div>`
         )
         .addTo(map);
     };
@@ -564,8 +571,8 @@ export function TollStationMap() {
       <aside className="panel map-sidebar-left">
         <div className="map-basemap-switcher">
           <div>
-            <h3 style={{ margin: 0 }}>Chọn nền bản đồ</h3>
-            <p style={{ margin: "8px 0 0", color: "var(--muted)" }}>
+            <h3 className="section-title">Chọn nền bản đồ</h3>
+            <p className="section-copy">
               Đổi nhanh giữa các nền để xem lớp trạm và tuyến trong các bối cảnh hiển thị khác
               nhau.
             </p>
@@ -589,17 +596,18 @@ export function TollStationMap() {
             })}
           </div>
 
-          <p style={{ margin: 0, color: "var(--muted)", fontSize: "14px" }}>
-            Nền đang dùng: <strong style={{ color: "var(--text)" }}>{activeBasemap.label}</strong>
+          <p className="map-current-basemap">
+            Nền đang dùng: <strong>{activeBasemap.label}</strong>
           </p>
         </div>
       </aside>
 
       <div className="panel map-stage">
         <div>
-          <h3 style={{ margin: 0 }}>Bản đồ tương tác</h3>
-          <p style={{ margin: "8px 0 0", color: "var(--muted)" }}>
-            Bấm vào marker để xem thông tin trạm.
+          <h3 className="section-title">Bản đồ tương tác</h3>
+          <p className="section-copy">
+            Bấm vào marker để xem thông tin trạm và dùng khung hai bên để đổi nền hoặc chuyển hành
+            trình đang theo dõi.
           </p>
         </div>
 
@@ -626,7 +634,7 @@ export function TollStationMap() {
               className="map-mask-overlay"
               viewBox={`0 0 ${maskOverlay.width} ${maskOverlay.height}`}
             >
-              <path d={maskOverlay.path} fill="rgba(163, 163, 163, 0.30)" fillRule="evenodd" />
+              <path d={maskOverlay.path} fill="var(--map-mask-fill)" fillRule="evenodd" />
             </svg>
           ) : null}
         </div>
@@ -634,8 +642,8 @@ export function TollStationMap() {
 
       <aside className="panel map-sidebar-right">
         <div className="map-journeys">
-          <h3 style={{ margin: 0 }}>Danh sách hành trình</h3>
-          <p style={{ margin: "8px 0 0", color: "var(--muted)" }}>
+          <h3 className="section-title">Danh sách hành trình</h3>
+          <p className="section-copy">
             Chọn một hành trình để mở thông tin chi tiết và cập nhật tuyến trên bản đồ.
           </p>
           {JOURNEY_OPTIONS.map((journey) => {

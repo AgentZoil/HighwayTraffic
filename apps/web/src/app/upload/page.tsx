@@ -7,8 +7,9 @@ export default function UploadPage() {
         <span className="eyebrow">Tải dữ liệu</span>
         <h1>Nạp file CSV và Excel</h1>
         <p>
-          Khu vực này dự kiến kiểm tra file, ánh xạ cột dữ liệu, xem trước dữ liệu và chuyển đổi
-          về một schema thống nhất trước khi đổ lên khu vực biểu đồ.
+          Luồng upload thật sau này sẽ được đưa vào cùng hệ card, badge và trạng thái tương tác để
+          việc kiểm tra file, xem trước dữ liệu và cập nhật biểu đồ vẫn giữ đúng nhịp điệu thị giác
+          của toàn bộ app.
         </p>
       </section>
 
